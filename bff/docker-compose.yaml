@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+   graphql:
+      image: dalongrong/nestjs-graphql
+      build: ./
+      tty: true
+      ports:
+        - "3000:3000"
