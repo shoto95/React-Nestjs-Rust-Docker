@@ -9,4 +9,4 @@ services:
       - ./:/usr/src/webapp01
     command: sh -c "cd sample_app && npm run dev"
     ports:
-      - 3100:3100
+      - 8080:8080
