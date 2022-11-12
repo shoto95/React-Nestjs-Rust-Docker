@@ -2,7 +2,16 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
+import { useQuery } from "@apollo/client";
+import { CATS_LIST } from "./api/queries/query";
+
 export default function Home() {
+
+//useQuery(query.tsで名付けたメソッド名)
+const { data } = useQuery(CATS_LIST);
+
+console.dir(JSON.stringify(data));
+
   return (
     <div className={styles.container}>
       <Head>
