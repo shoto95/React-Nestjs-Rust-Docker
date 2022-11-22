@@ -15,10 +15,20 @@ cargo run --bin graphql-server
 http://127.0.0.1:8080/graphiql
 ```
 
-4. サンプルを実行すると、結果が表示される
+・サンプルを実行すると、結果が表示される（get版）
 ```
 query {
   human( id: "0") {
+    id,
+    message
+  }
+}
+```
+
+・サンプルを実行すると、結果が表示される（post版）
+```
+mutation  {
+  createHello(newHello: {message: "yeeeeeeeeah" } )  {
     id,
     message
   }
